@@ -1,0 +1,24 @@
+ 1879  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ ibkrprod:~/prod/
+ 1880  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ibkrdev:~/dev/ ./
+ 1885  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ ibkrprod:~/prod/
+ 1886  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ibkrdev:~/dev/ ./
+ 1894  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ibkrdev:~/dev/ ./
+ 1898  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ ibkrprod:~/prod/
+ 1899  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ibkrdev:~/dev/ ./
+ 1900  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ ibkrprod:~/prod/
+ 2020  rsync --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/
+ 2042  rsync --delete-after --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/svc/
+ 2043  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/svc/
+ 2045  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/svc/
+ 2047  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./fh/ ibkrdev:~/fh/
+ 2054  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ib/ ibkrdev:~/dev/
+ 2056  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ib/ ibkrdev:~/dev/
+ 2058  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/svc/
+ 2061  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./fh/ ibkrprod:~/fh/
+ 2062  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrprod:~/svc/
+ 2064  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrprod:~/svc/
+ 2065  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrdev:~/svc/
+ 2067  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./ib/ ibkrprod:~/prod/
+ 2068  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrmon:~/svc/
+ 2078  for i in dev prod mon ; do echo rsync --exclude=*/log/main/* --exclude=*/supervise --exclude=*/log/supervise -ve 'ssh -i ~/.ssh/gcp' -aHx ibkr$i:~/service/ ./$i/ ; done
+ 2079  for i in dev prod mon ; do mkdir $i ;  rsync --exclude=*/log/main/* --exclude=*/supervise --exclude=*/log/supervise -ve 'ssh -i ~/.ssh/gcp' -aHx ibkr$i:~/service/ ./$i/ ; done
