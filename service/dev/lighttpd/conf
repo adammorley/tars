@@ -1,0 +1,7 @@
+server.pid-file = "./pid/pid"
+server.document-root        = "./web"
+server.username             = "www-data"
+server.groupname            = "www-data"
+server.port                 = 8082
+index-file.names            = ("index.html")
+mimetype.assign = (".html" => "text/html")

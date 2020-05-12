@@ -1,0 +1,2 @@
+#!/bin/bash
+exec setuidgid logger multilog ./main
