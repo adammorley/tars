@@ -1,0 +1,3 @@
+#!/bin/bash
+exec 2>&1
+exec setuidgid adam /home/adam/ib/bin/autoOrder --conf /home/adam/ib/conf/ESM0.prod --info

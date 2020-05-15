@@ -22,3 +22,4 @@
  2068  rsync  --exclude='*.swp' --exclude=.git* --exclude=market/__pycache__ --exclude=api/__pycache__ -ve 'ssh -i ~/.ssh/gcp' -aHx ./svc/ ibkrmon:~/svc/
  2078  for i in dev prod mon ; do echo rsync --exclude=*/log/main/* --exclude=*/supervise --exclude=*/log/supervise -ve 'ssh -i ~/.ssh/gcp' -aHx ibkr$i:~/service/ ./$i/ ; done
  2079  for i in dev prod mon ; do mkdir $i ;  rsync --exclude=*/log/main/* --exclude=*/supervise --exclude=*/log/supervise -ve 'ssh -i ~/.ssh/gcp' -aHx ibkr$i:~/service/ ./$i/ ; done
+ for i in *; do sudo chgrp adam $i/supervise $i/log/supervise ; sudo chmod 770 $i/supervise $i/log/supervise; sudo chmod g+w $i/supervise/ok; sudo chmod g+w $i/log/supervise/ok; sudo chown root:google-sudoers $i/supervise/ok ; sudo chown root:google-sudoers $i/log/supervise/ok ; done
